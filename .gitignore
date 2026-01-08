@@ -1,0 +1,99 @@
+*.iml
+.kotlin
+.gradle
+**/build/
+xcuserdata
+!src/**/build/
+local.properties
+.idea
+.DS_Store
+captures
+.externalNativeBuild
+.cxx
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
+node_modules/
+# ---- Kotlin / Gradle ----
+.gradle/
+.kotlinc/
+.kotlin/
+**/out/
+**/bin/
+
+# Keep Gradle wrapper (commit these)
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+!/gradlew
+!/gradlew.bat
+
+# ---- Android / Android Studio / IntelliJ ----
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/httpRequests
+.idea/shelf
+
+# Native build intermediates
+**/.cxx/
+**/.externalNativeBuild/
+captures/
+
+# Android artifacts
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# ---- iOS / Xcode (if you add iOS targets) ----
+**/DerivedData/
+**/*.xcworkspace/xcuserdata/
+**/*.xcodeproj/project.xcworkspace/xcuserdata/
+**/*.xcuserstate
+**/*.xcuserdatad
+**/Pods/
+**/*.ipa
+**/*.dSYM
+**/*.dSYM.zip
+
+# ---- JS / Web / Yarn / Node ----
+dist/
+.pnp.*
+.yarn/*
+!.yarn/releases/
+!.yarn/plugins/
+!.yarn/sdks/
+!.yarn/versions/
+npm-debug.log*
+yarn-error.log
+
+# ---- Secrets / Signing ----
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+key.properties
+.env
+.env.*
+
+# google-services.json
+# GoogleService-Info.plist
+
+# ---- IDEs / Editors ----
+.vscode/
+*.swp
+*.swo
+
+# ---- OS files ----
+Thumbs.db
+Desktop.ini
+
+# ---- Misc ----
+*.log
