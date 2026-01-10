@@ -98,28 +98,13 @@ Note: Wasm Compose is evolving; some features may be limited.
 - Theme toggle: Switch between light and dark themes
 
 
-## Usage notes and tips
-
-- Navigation
-  - Bottom bar uses Compose Navigation; if you navigate via section headers in Home, ensure the route uses `popUpTo` appropriately to keep the expected back stack behavior. Consider a TopAppBar with tabs if you prefer single‑source navigation state.
-
-- Theme toggle
-  - The app theme is defined in `ui/theme/Theme.kt`. If your toggle isn’t changing the theme, verify that the state controlling `darkTheme` flows from a `rememberSaveable` or ViewModel and is used when calling `QuotesKMPTheme(darkTheme = ...)` at the app root.
-
-- Share API
-  - Common `expect class ShareManager` with `fun shareText(text: String, subject: String? = null)`
-  - Android actual uses `Intent.ACTION_SEND`
-  - Desktop actual uses clipboard + mailto fallback
-  - JS/Wasm actuals are currently no‑ops (you can implement `navigator.share` for supported browsers, or fallback to clipboard)
-
 
 ## Troubleshooting
 
 - Build errors: Ensure JDK 11 and Android SDK versions match `composeApp/build.gradle.kts`.
 - Compose previews: Use Android Studio with Compose tooling enabled; previews may require Android target.
 - JS/Wasm tasks not found: Make sure you’re running the commands on the `composeApp` module (`:composeApp:jsBrowserRun`, `:composeApp:wasmJsBrowserRun`).
-- Red symbol `shareText`: Confirm you import `tech.kaustubhdeshpande.quoteskmp.share.ShareManager` and call a valid actual for the current platform. On Android, construct with a `Context` (`ShareManager(context)`), on other targets use the no‑arg actual where available.
-- Dark mode toggle not working: Verify the icon’s `onClick` changes the theme state at the root, not only inside a child composable. If the theme composable doesn’t recompose, lift the state up to `App.kt`.
+
 
 
 ## Development commands
