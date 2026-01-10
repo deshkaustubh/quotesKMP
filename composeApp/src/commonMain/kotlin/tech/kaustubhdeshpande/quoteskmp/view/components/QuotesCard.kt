@@ -30,12 +30,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import tech.kaustubhdeshpande.quoteskmp.FavouriteViewModel
 import tech.kaustubhdeshpande.quoteskmp.data.Quote
+import tech.kaustubhdeshpande.quoteskmp.share.ShareManager
 
 @Composable
 fun QuotesCard(
@@ -84,12 +84,6 @@ fun QuotesCard(
                     horizontalArrangement = Arrangement.End,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Icon(
-                        imageVector = Icons.Filled.Share,
-                        contentDescription = null,
-                        tint = Color.White
-                    )
-                    Spacer(modifier = Modifier.padding(horizontal = 8.dp))
                     IconButton(
                         onClick = {
                             if (isFavorite) {
@@ -100,7 +94,7 @@ fun QuotesCard(
                         }
                     ) {
                         Icon(
-                            imageVector =  if(isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
+                            imageVector = if (isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
                             contentDescription = if (isFavorite) "Unfavorite" else "favorite",
                             tint = Color.White
                         )

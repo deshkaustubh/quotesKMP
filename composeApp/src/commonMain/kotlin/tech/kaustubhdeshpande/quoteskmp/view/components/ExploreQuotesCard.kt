@@ -17,7 +17,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -107,11 +106,6 @@ fun ExploreQuotesCard(
                 }
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Icon(
-                        imageVector = Icons.Filled.Share,
-                        contentDescription = null,
-                        modifier = Modifier.size(16.dp)
-                    )
                     Spacer(modifier = Modifier.width(8.dp))
                     IconButton(
                         onClick = {
@@ -134,7 +128,10 @@ fun ExploreQuotesCard(
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = quote.text,
-                style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 24.sp, fontSize = 16.sp),
+                style = MaterialTheme.typography.bodyMedium.copy(
+                    lineHeight = 24.sp,
+                    fontSize = 16.sp
+                ),
                 textAlign = TextAlign.Left
             )
         }
