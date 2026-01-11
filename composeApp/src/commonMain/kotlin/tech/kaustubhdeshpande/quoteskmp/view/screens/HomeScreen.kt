@@ -44,7 +44,7 @@ fun HomeScreen(
         modifier = Modifier
             .background(MaterialTheme.colorScheme.background)
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(top = 16.dp, start = 16.dp, end = 16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         item {
@@ -155,6 +155,7 @@ fun HomeScreen(
                     )
                 }
             }
+            Spacer(modifier = Modifier.height(16.dp))
         }
     }
 }

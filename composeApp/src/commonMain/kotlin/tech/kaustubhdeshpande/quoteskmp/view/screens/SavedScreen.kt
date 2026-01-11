@@ -14,6 +14,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.HeartBroken
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -38,7 +39,7 @@ fun SavedScreen(
     if (favorites.isEmpty()) {
         LazyColumn(
             modifier = modifier.fillMaxSize(),
-            contentPadding = PaddingValues(16.dp),
+            contentPadding = PaddingValues(top = 16.dp, start = 16.dp, end = 16.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -52,7 +53,7 @@ fun SavedScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
-                        imageVector = Icons.Filled.Favorite,
+                        imageVector = Icons.Filled.HeartBroken,
                         contentDescription = "Favorite",
                         modifier = Modifier.size(56.dp),
                         tint = Color(0xff634fa1)
