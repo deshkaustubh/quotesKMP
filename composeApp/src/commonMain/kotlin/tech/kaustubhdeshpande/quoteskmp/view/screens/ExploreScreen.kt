@@ -88,7 +88,7 @@ fun ExploreScreen(
                         onClick = { selectedIndex = index },
                         modifier = Modifier
                             .padding(top = 8.dp, bottom = 16.dp, end = 8.dp)
-                            .background(color = bg, shape = RoundedCornerShape(40)),
+                            .background(color = bg, shape = RoundedCornerShape(56)),
                         text = {
                             Text(
                                 text = label,
