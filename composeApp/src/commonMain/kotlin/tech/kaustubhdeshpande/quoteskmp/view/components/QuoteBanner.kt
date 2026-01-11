@@ -60,11 +60,11 @@ fun QuoteBanner(modifier: Modifier = Modifier) {
             Text(
                 modifier = Modifier
                     .wrapContentHeight(),
-                text = "I am",
+                text = "I love KMP",
                 textAlign = TextAlign.Center,
                 softWrap = true,
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    fontSize = 32.sp,
+                    fontSize = 24.sp,
                     color = Color.White
                 ),
                 letterSpacing = 4.sp
@@ -72,11 +72,11 @@ fun QuoteBanner(modifier: Modifier = Modifier) {
             Text(
                 modifier = Modifier
                     .wrapContentHeight(),
-                text = "Iron Man",
+                text = "\nKotlin Everywhere",
                 textAlign = TextAlign.Center,
                 softWrap = true,
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    fontSize = 32.sp,
+                    fontSize = 24.sp,
                     color = Color.White
                 ),
                 letterSpacing = 4.sp
