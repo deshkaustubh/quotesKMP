@@ -16,7 +16,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -35,7 +34,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import tech.kaustubhdeshpande.quoteskmp.FavouriteViewModel
 import tech.kaustubhdeshpande.quoteskmp.data.Quote
-import tech.kaustubhdeshpande.quoteskmp.share.ShareManager
 
 @Composable
 fun QuotesCard(

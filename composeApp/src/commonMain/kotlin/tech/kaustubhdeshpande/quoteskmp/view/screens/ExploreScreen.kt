@@ -37,8 +37,10 @@ fun ExploreScreen(
 ) {
     val categories: List<QuoteCategory?> = remember { listOf(null) + QuoteCategory.entries }
 
-    val initialCategory = remember(initialCategoryName) { QuoteCategory.getCategory(initialCategoryName) }
-    val initialIndex = remember(initialCategory) { categories.indexOf(initialCategory).takeIf { it >= 0 } ?: 0 }
+    val initialCategory =
+        remember(initialCategoryName) { QuoteCategory.getCategory(initialCategoryName) }
+    val initialIndex =
+        remember(initialCategory) { categories.indexOf(initialCategory).takeIf { it >= 0 } ?: 0 }
     var selectedIndex by rememberSaveable { mutableIntStateOf(initialIndex) }
 
     // Cache the full list once (assuming it’s static). If it’s dynamic, load it in a ViewModel off the main thread.
@@ -63,7 +65,7 @@ fun ExploreScreen(
             Text(
                 text = "Categories",
                 style = MaterialTheme.typography.headlineLarge,
-                fontSize = 32.sp
+                fontSize = 32.sp,
             )
         }
 

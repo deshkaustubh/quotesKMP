@@ -1,4 +1,3 @@
-import org.gradle.kotlin.dsl.implementation
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -18,20 +17,20 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     jvm()
-    
+
     js {
         browser()
         binaries.executable()
     }
-    
+
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         browser()
         binaries.executable()
     }
-    
+
     sourceSets {
         androidMain.dependencies {
             implementation(compose.preview)
@@ -48,12 +47,10 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtimeCompose)
             // Material Icons
             implementation(libs.material.icons.extended)
-            //navigation
+            // navigation
             implementation(libs.navigation.compose)
-            //serialization
+            // serialization
             implementation(libs.ktor.client.serialization.json)
-
-
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
