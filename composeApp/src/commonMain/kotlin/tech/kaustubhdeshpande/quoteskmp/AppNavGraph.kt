@@ -63,7 +63,9 @@ fun AppNavGraph(
                             val startId = navController.graph.findStartDestination().id
                             popUpTo(startId) { saveState = true }
                             launchSingleTop = true
-                            restoreState = true
+                            // keep the restore state as false for proper navigation
+                            // from different components of home to screen to the exact locations on the explore screen
+                            restoreState = false
                         }
                     },
                     favViewModel = favViewModel,
