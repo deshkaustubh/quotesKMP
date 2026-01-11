@@ -73,7 +73,7 @@ You can also build native installers (MSI/Deb/DMG) defined under `compose.deskto
 Start the browser target (Compose for Web JS):
 
 ```powershell
-./gradlew :composeApp:jsBrowserRun
+./gradlew :composeApp:jsBrowserDevelopmentRun
 ```
 
 This will start a dev server and open your default browser. If it doesn’t open automatically, check the terminal URL.
@@ -83,7 +83,7 @@ This will start a dev server and open your default browser. If it doesn’t open
 Run the experimental Wasm target:
 
 ```powershell
-./gradlew :composeApp:wasmJsBrowserRun
+./gradlew :composeApp:wasmJsBrowserDevelopmentRun
 ```
 
 Note: Wasm Compose is evolving; some features may be limited.
