@@ -46,7 +46,7 @@ fun SavedScreen(
                 Box(
                     modifier = Modifier.background(
                         shape = CircleShape,
-                        color = Color(0xff4c3384).copy(0.5f)
+                        color = Color(0xff634fa1).copy(0.3f)
                     )
                         .size(120.dp),
                     contentAlignment = Alignment.Center
@@ -55,7 +55,7 @@ fun SavedScreen(
                         imageVector = Icons.Filled.Favorite,
                         contentDescription = "Favorite",
                         modifier = Modifier.size(56.dp),
-                        tint = Color(0xff7851d1)
+                        tint = Color(0xff634fa1)
                     )
                 }
                 Spacer(modifier = Modifier.height(32.dp))
