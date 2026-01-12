@@ -1,6 +1,7 @@
 # QuotesKMP — Kotlin Multiplatform Compose app
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[![Watch the video](https://img.youtube.com/vi/RsbGUIIgdHk/maxresdefault.jpg)](https://www.youtube.com/watch?v=RsbGUIIgdHk)
 
 A Kotlin Multiplatform app built with Compose Multiplatform that runs on:
 - Android
